@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Tentang Kita - Artisan Kopi & Patisserie Solo (Kak Aca)</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main> :first-child {
+        margin-top: 0 !important;
+      }
+
+      main> :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/store.js"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "background": "#fef8f5",
+            "tertiary-container": "#473029",
+            "on-secondary-fixed": "#390c07",
+            "tertiary-fixed": "#ffdbd0",
+            "surface-bright": "#fef8f5",
+            "on-surface-variant": "#504443",
+            "outline-variant": "#d4c3c1",
+            "tertiary": "#2f1b15",
+            "primary-container": "#4a2e2b",
+            "surface-dim": "#ded9d6",
+            "on-secondary-container": "#7a3d35",
+            "tertiary-fixed-dim": "#e3bfb4",
+            "on-secondary": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-background": "#1d1b1a",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#2d1513",
+            "on-tertiary-fixed": "#2a1710",
+            "secondary-fixed-dim": "#ffb4a8",
+            "inverse-primary": "#e7bdb8",
+            "surface": "#fef8f5",
+            "surface-tint": "#775652",
+            "on-surface": "#1d1b1a",
+            "surface-container-highest": "#e7e1de",
+            "error": "#ba1a1a",
+            "secondary-container": "#feaca0",
+            "secondary": "#8c4d43",
+            "surface-container-low": "#f8f2ef",
+            "surface-container-high": "#ede7e4",
+            "on-tertiary-container": "#b8978d",
+            "surface-container": "#f2edea",
+            "inverse-on-surface": "#f5f0ed",
+            "primary-fixed-dim": "#e7bdb8",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "primary-fixed": "#ffdad6",
+            "on-error": "#ffffff",
+            "primary": "#321917",
+            "surface-variant": "#e7e1de",
+            "on-tertiary-fixed-variant": "#5a4139",
+            "secondary-fixed": "#ffdad5",
+            "on-primary": "#ffffff",
+            "outline": "#827472",
+            "on-primary-container": "#bc9590",
+            "on-primary-fixed-variant": "#5d3f3c",
+            "on-secondary-fixed-variant": "#70362d",
+            "inverse-surface": "#32302e"
+          },
+          "fontFamily": {
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "display": ["Playfair Display"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body
+  class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+  <!-- Header Navigation -->
+  <header
+    class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(74,46,43,0.04)]">
+    <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6">
+
+      <!-- Brand Logo & Branch Info -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0 hover:opacity-90 transition-opacity">
+        <img alt="Logo Tentang Kita" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuB466BcxNDsCPR8IRuE45h2wfKv80MQ3xotK1wgGPy32lEb2x1z9bfNkdSvB6N-mmecvybmUD8EpBCH3SprpU2YqniZ4adYKiXTw5bVpMQrQNQ5p5UAXeA3_7ihjANZ9pL4FiFJaYvGsq5HMV6DLdp9x422HfYoLiA95ZDcl-hmqHniau1SxJKK7enzwhXsLqj-c-UjCJXPT9m8OU8PCLYJ4yW3O3TUaeZ7MgWAoEl4CulMn5vO371glQ">
+        <div class="flex flex-col">
+          <span class="font-headline-md text-headline-md text-primary tracking-tight leading-none">TENTANG KITA</span>
+          <span class="font-label-sm text-[10px] text-secondary uppercase tracking-widest mt-0.5">Slamet Riyadi Solo •
+            Kak Aca</span>
+        </div>
+      </a>
+
+      <!-- Search Input -->
+      <div class="hidden xl:flex items-center flex-1 max-w-xs mx-2">
+        <div
+          class="w-full flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full shadow-[inset_0_1px_3px_rgba(74,46,43,0.03)]">
+          <span class="material-symbols-outlined text-outline text-[18px] shrink-0">search</span>
+          <input id="headerSearchInput"
+            class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none"
+            placeholder="Cari selat solo, roti srikaya, kopi..." type="text">
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+        <a aria-current="page"
+          class="px-3.5 py-2 transition-colors bg-secondary-container text-on-secondary-container font-semibold rounded-full shadow-[0_2px_8px_rgba(140,77,67,0.12)] text-xs lg:text-sm"
+          href="index.html">Menu Pilihan</a>
+        <a class="px-3 py-2 rounded-full font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors text-xs lg:text-sm"
+          href="ringkasan_pesanan.html">Halaman Pesanan</a>
+        <a class="px-3 py-2 rounded-full font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors text-xs lg:text-sm"
+          href="struk.html">Struk Pembelian</a>
+        <a class="px-3 py-2 rounded-full font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors text-xs lg:text-sm"
+          href="lacak_status.html">Lacak Pesanan</a>
+        <a class="px-3 py-2 rounded-full font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors text-xs lg:text-sm"
+          href="profil.html">Profil Kafe</a>
+        <a class="px-3 py-2 rounded-full font-semibold text-secondary hover:bg-secondary-fixed/50 transition-colors flex items-center gap-1 text-xs lg:text-sm"
+          href="admin.html">
+          <span class="material-symbols-outlined text-[15px]">admin_panel_settings</span>
+          <span>Portal Toko</span>
+        </a>
+      </nav>
+
+      <!-- Cart Button & Quick Profile -->
+      <div class="flex items-center gap-2.5 shrink-0">
+        <button
+          class="flex items-center gap-2.5 bg-surface-container-low hover:bg-surface-container text-primary px-3.5 py-1.5 rounded-full shadow-[0_2px_12px_rgba(74,46,43,0.06)] transition-all group"
+          type="button" onclick="window.location.href='ringkasan_pesanan.html'" style="cursor:pointer;">
+          <div class="relative flex items-center justify-center">
+            <span class="material-symbols-outlined text-secondary text-[20px]">shopping_bag</span>
+            <span
+              class="absolute -top-1.5 -right-2 bg-secondary text-on-secondary font-label-sm text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold shadow-sm"
+              id="headerCartBadge">0</span>
+          </div>
+          <div class="flex flex-col text-left">
+            <span class="font-label-sm text-[10px] text-on-surface-variant leading-none">Pesanan</span>
+            <span class="font-label-md text-label-md text-primary font-bold leading-tight" id="headerCartTotal">Rp
+              0</span>
+          </div>
+        </button>
+
+        <a href="profil.html"
+          class="w-8 h-8 rounded-full overflow-hidden border border-secondary/30 shadow-[0_2px_8px_rgba(50,25,23,0.25)] hover:scale-105 transition-transform"
+          title="Buka Profil Kafe & Kak Aca">
+          <img src="img/aca.jpg" alt="Kak Aca" class="w-full h-full object-cover object-top" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-surface min-h-[calc(100vh-280px)]">
+    <div class="flex flex-col w-full">
+
+      <!-- Top Decorative Ambient Glow -->
+      <div class="relative w-full overflow-hidden">
+        <div
+          class="absolute -top-24 left-1/2 -translate-x-1/2 w-[720px] h-[280px] bg-gradient-to-b from-secondary-fixed/30 via-secondary-container/15 to-transparent rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 pb-12">
+
+          <!-- Romantic & Cozy Header Banner -->
+          <section
+            class="relative bg-surface-container-low rounded-3xl p-8 lg:p-12 overflow-hidden shadow-[0_8px_32px_rgba(74,46,43,0.05)] border border-outline-variant/30">
+            <!-- Botanical Ambient SVGs -->
+            <svg class="absolute -right-10 -bottom-10 w-72 h-72 text-secondary-fixed/40 pointer-events-none rotate-12"
+              fill="none" viewBox="0 0 200 200">
+              <path d="M100 20C90 60 40 80 20 100C60 110 80 160 100 180C110 140 160 120 180 100C140 90 120 40 100 20Z"
+                fill="currentColor" opacity="0.6"></path>
+              <circle cx="100" cy="100" fill="currentColor" opacity="0.3" r="30"></circle>
+            </svg>
+
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-8 flex flex-col gap-4">
+                <div
+                  class="inline-flex items-center gap-2 self-start bg-secondary-fixed text-on-secondary-fixed px-3.5 py-1.5 rounded-full font-label-md text-label-md tracking-wide">
+                  <span class="material-symbols-outlined text-[16px]">pin_drop</span>
+                  <span>Jl. Slamet Riyadi No. 284, Solo • Dikelola oleh Kak Aca 🌸</span>
+                </div>
+
+                <h1
+                  class="font-headline-lg text-headline-lg lg:font-display lg:text-display text-primary tracking-tight leading-tight">
+                  Setiap Teguk, Ada Kisah.<br>
+                  <span class="italic text-secondary">Tentang Rasa, Tentang Kita.</span>
+                </h1>
+
+                <div class="flex flex-col gap-2 max-w-xl">
+                  <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Nikmati aroma kopi arabika pilihan, kelembutan <strong>Roti Srikaya Solo Panggang</strong> buatan
+                    Kak Aca, dan gurihnya <strong>Selat Solo Daging Sapi Premium</strong> dengan harga ramah standar
+                    Solo.
+                  </p>
+                  <p class="font-body-sm text-body-sm text-secondary italic font-medium">
+                    ✨ “Kopi pertama untuk semangatmu, masakan hangat untuk harimu di Kota Solo.”
+                  </p>
+                </div>
+
+                <!-- Promo Vouchers -->
+                <div class="pt-2 flex flex-wrap items-center gap-4">
+                  <div
+                    class="flex items-center gap-3 bg-surface-container-lowest px-4 py-2.5 rounded-full shadow-[0_2px_12px_rgba(74,46,43,0.06)] border border-outline-variant/30">
+                    <div
+                      class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                      <span class="material-symbols-outlined text-[18px]">local_offer</span>
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Diskon Wong
+                        Solo</span>
+                      <span class="font-label-lg text-label-lg text-primary tracking-wide">
+                        Kode: <span class="font-bold underline decoration-secondary decoration-wavy">SOLORAYA</span>
+                        (-Rp 5.000)
+                      </span>
+                    </div>
+                  </div>
+
+                  <a href="profil.html"
+                    class="flex items-center gap-2 font-body-sm text-body-sm text-secondary font-bold hover:underline">
+                    <span class="material-symbols-outlined text-[20px]">person_heart</span>
+                    <span>Baca Kisah Kak Aca ↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Hero Image Vignette -->
+              <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                <div
+                  class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full p-2 bg-gradient-to-tr from-secondary-container via-surface-container to-secondary-fixed shadow-[0_12px_36px_rgba(140,77,67,0.18)] flex items-center justify-center">
+                  <div class="w-full h-full rounded-full overflow-hidden bg-cover bg-center"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgPQFe3kunJLGTyuKRZvjAC45quMl86XkjJRIqcXMh1-nDFGphz-Pwl2FGtLItfdx-hL1jLFGssE5E5vAbYt_i9xY2qDYVgOLVDInb6ip23FQXD-VqZTPOlVT8w0ZsE_SNJau3y3oaq054CDLYIFVpN1zMNf92jMKwwryJIqoIzZyqZhl7N0oBIGYplGRw5WjJPyWohZJeAN9qGukV8mhi4z2Pi3iPycQs-o1hPr9XwhKHOe1sDm_TwA')">
+                  </div>
+                  <div
+                    class="absolute -bottom-2 -left-2 bg-surface-container-lowest px-4 py-2 rounded-2xl shadow-[0_4px_16px_rgba(74,46,43,0.12)] flex items-center gap-2.5 border border-outline-variant/30">
+                    <span class="material-symbols-outlined text-secondary text-[22px]">auto_awesome</span>
+                    <div class="flex flex-col text-left">
+                      <span class="font-label-sm text-label-sm text-on-surface-variant">Signature Solo</span>
+                      <span class="font-title-md text-title-md text-primary font-bold">Kopi Susu Aren</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Category Filter Pills Bar (Variasi Lengkap Standar Solo) -->
+          <section class="mt-10 flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary text-[24px]">storefront</span>
+                <h2 class="font-headline-md text-headline-md text-primary">Katalog Menu Solo</h2>
+              </div>
+              <span class="font-body-sm text-body-sm text-on-surface-variant" id="catalogCounterText">Menampilkan
+                seluruh variasi menu</span>
+            </div>
+
+            <div class="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-none" id="categoryFilterContainer">
+              <button
+                class="category-chip active flex items-center gap-2 px-5 py-2.5 rounded-full font-label-lg text-label-lg bg-secondary text-on-secondary shadow-[0_2px_10px_rgba(140,77,67,0.25)] transition-all shrink-0"
+                data-cat="all" type="button">
+                <span class="material-symbols-outlined text-[18px]">apps</span>
+                <span>Semua Menu</span>
+              </button>
+
+              <button
+                class="category-chip flex items-center gap-2 px-5 py-2.5 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all shrink-0"
+                data-cat="favorite" type="button">
+                <span class="material-symbols-outlined text-[18px]">stars</span>
+                <span>Favorit Tamu ✨</span>
+              </button>
+
+              <button
+                class="category-chip flex items-center gap-2 px-5 py-2.5 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all shrink-0"
+                data-cat="makanan" type="button">
+                <span class="material-symbols-outlined text-[18px]">restaurant</span>
+                <span>Makanan Berat 🍛</span>
+              </button>
+
+              <button
+                class="category-chip flex items-center gap-2 px-5 py-2.5 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all shrink-0"
+                data-cat="roti" type="button">
+                <span class="material-symbols-outlined text-[18px]">bakery_dining</span>
+                <span>Roti & Pastry 🥐</span>
+              </button>
+
+              <button
+                class="category-chip flex items-center gap-2 px-5 py-2.5 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all shrink-0"
+                data-cat="kopi" type="button">
+                <span class="material-symbols-outlined text-[18px]">local_cafe</span>
+                <span>Kopi Signature ☕</span>
+              </button>
+
+              <button
+                class="category-chip flex items-center gap-2 px-5 py-2.5 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all shrink-0"
+                data-cat="teh" type="button">
+                <span class="material-symbols-outlined text-[18px]">emoji_food_beverage</span>
+                <span>Non-Kopi & Teh 🌸</span>
+              </button>
+
+              <button
+                class="category-chip flex items-center gap-2 px-5 py-2.5 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all shrink-0"
+                data-cat="cemilan" type="button">
+                <span class="material-symbols-outlined text-[18px]">cake</span>
+                <span>Cemilan Manis 🍰</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- Main Layout: Grid Catalog + Live Mini Cart Sidebar -->
+          <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <!-- Left: Dynamic Product Showcase Grid (8 cols) -->
+            <div class="lg:col-span-8 flex flex-col gap-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="productCardsGrid">
+                <!-- Product cards rendered dynamically from TentangKitaStore.getMenuCatalog() -->
+              </div>
+
+              <!-- Journey Guide Card -->
+              <div
+                class="bg-surface-container-low p-6 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-[inset_0_1px_3px_rgba(74,46,43,0.02)] border border-outline-variant/30">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[24px]">soup_kitchen</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <h4 class="font-title-md text-title-md text-primary font-bold">Dapur & Bar Tentang Kita Solo</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Setiap masakan dan roti dipanggang segar per pesanan oleh tim Kak Aca.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                  <span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Estimasi Siap: ~10-15
+                    Menit</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Sticky Order Summary & Real-time Mini Cart (4 cols) -->
+            <aside class="lg:col-span-4 sticky top-28 flex flex-col gap-6">
+              <div
+                class="bg-surface-container-lowest rounded-3xl p-6 shadow-[0_12px_36px_rgba(74,46,43,0.08)] flex flex-col gap-5 border border-outline-variant/30">
+                <div class="flex items-center justify-between pb-3">
+                  <div class="flex items-center gap-2.5">
+                    <div
+                      class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+                      <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+                    </div>
+                    <div>
+                      <h3 class="font-title-lg text-title-lg text-primary font-bold">Pesanan Saya</h3>
+                      <span class="font-label-sm text-label-sm text-on-surface-variant">Slamet Riyadi Solo • Meja /
+                        Ambil</span>
+                    </div>
+                  </div>
+                  <span
+                    class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-bold"
+                    id="cartCountBadge">0 Item</span>
+                </div>
+
+                <!-- Cart Items List (Dynamic Container) -->
+                <div class="flex flex-col gap-3 max-h-[300px] overflow-y-auto pr-1" id="cartItemsList">
+                  <!-- Rendered via renderSidebarCart() -->
+                </div>
+
+                <!-- Voucher Banner -->
+                <div
+                  class="bg-secondary-fixed/40 px-3.5 py-2.5 rounded-2xl flex items-center justify-between text-on-secondary-fixed"
+                  id="sidebarVoucherBanner">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">sell</span>
+                    <span class="font-label-md text-label-md font-semibold" id="sidebarVoucherTitle">Voucher
+                      SOLORAYA</span>
+                  </div>
+                  <span class="font-label-md text-label-md font-bold text-secondary" id="sidebarVoucherAmount">-Rp
+                    5.000</span>
+                </div>
+
+                <!-- Price Breakdown -->
+                <div class="flex flex-col gap-2 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+                  <div class="flex justify-between">
+                    <span>Subtotal Pesanan</span>
+                    <span class="font-medium text-on-surface" id="cartSubtotal">Rp 0</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Biaya Layanan Meja & Kemasan</span>
+                    <span class="font-medium text-on-surface" id="cartServiceFee">Rp 2.000</span>
+                  </div>
+                  <div class="flex justify-between text-secondary font-medium" id="sidebarDiscountRow">
+                    <span>Potongan Promo Solo</span>
+                    <span id="cartDiscount">-Rp 5.000</span>
+                  </div>
+                  <div class="h-px bg-surface-container-highest my-1"></div>
+                  <div class="flex justify-between items-baseline pt-1">
+                    <span class="font-title-md text-title-md text-primary font-bold">Total Pembayaran</span>
+                    <span class="font-headline-md text-headline-md text-primary font-bold" id="cartTotal">Rp 0</span>
+                  </div>
+                </div>
+
+                <!-- Action Checkout Button -->
+                <button
+                  class="w-full bg-primary hover:bg-primary-container text-on-primary py-3.5 rounded-full font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-[0_4px_16px_rgba(50,25,23,0.3)] hover:scale-101 active:scale-98 transition-all"
+                  onclick="window.location.href='ringkasan_pesanan.html'" type="button">
+                  <span>Lanjut ke Halaman Pesanan</span>
+                  <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                </button>
+
+                <p class="font-body-sm text-body-sm text-center text-on-surface-variant">
+                  “Dibuat dengan penuh rasa oleh Kak Aca & tim barista Solo.” ☕🌸
+                </p>
+              </div>
+
+              <!-- Quick Tracking Teaser Card -->
+              <div onclick="window.location.href='lacak_status.html'"
+                class="bg-surface-container-low p-5 rounded-3xl flex flex-col gap-3 shadow-[0_4px_16px_rgba(74,46,43,0.03)] cursor-pointer hover:bg-surface-container transition-all border border-outline-variant/30"
+                title="Buka pelacakan status pesanan">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Lacak
+                    Pesanan Aktif</span>
+                  <span
+                    class="font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded-full font-bold"
+                    id="activeOrderBadgeText">#TK-88294</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[18px]">skillet</span>
+                  </div>
+                  <div class="flex flex-col flex-1">
+                    <span class="font-title-md text-title-md text-primary font-bold" id="quickOrderStatusTitle">Sedang
+                      Dimasak / Diseduh</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">Dapur Slamet Riyadi Solo</span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-4 gap-1.5 pt-2">
+                  <div class="h-1.5 rounded-full bg-primary"></div>
+                  <div class="h-1.5 rounded-full bg-secondary animate-pulse"></div>
+                  <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+                  <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+                </div>
+              </div>
+            </aside>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Interactive Customization Modal -->
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center bg-primary/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 p-4"
+    id="customModal">
+    <div
+      class="bg-surface-container-lowest w-full max-w-lg rounded-3xl p-6 sm:p-8 shadow-[0_24px_48px_rgba(50,25,23,0.25)] transform scale-95 transition-transform duration-300 flex flex-col gap-6 max-h-[90vh] overflow-y-auto border border-outline-variant/30">
+
+      <!-- Modal Header -->
+      <div class="flex items-start justify-between">
+        <div class="flex flex-col">
+          <span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-widest">Kustomisasi
+            Pesanan</span>
+          <h3 class="font-headline-md text-headline-md text-primary" id="modalItemTitle">Caramel Macchiato Solo</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1" id="modalItemDesc">Sesuaikan porsi, suhu,
+            dan catatan rasa sesuai seleramu.</p>
+        </div>
+        <button
+          class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+          onclick="closeCustomModal()" type="button">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-5">
+        <!-- Size / Porsi Selector -->
+        <div class="flex flex-col gap-2.5">
+          <label class="font-label-lg text-label-lg text-primary font-bold">1. Pilihan Porsi / Ukuran Cup</label>
+          <div class="grid grid-cols-3 gap-2.5">
+            <label class="cursor-pointer">
+              <input checked="" class="peer sr-only" name="cupSize" type="radio" value="Regular (S)">
+              <div
+                class="p-3 rounded-2xl bg-surface-container-low peer-checked:bg-primary peer-checked:text-on-primary text-on-surface-variant flex flex-col items-center gap-1 transition-all">
+                <span class="material-symbols-outlined text-[20px]">local_cafe</span>
+                <span class="font-label-md text-label-md font-bold">Reguler</span>
+                <span class="font-label-sm text-[11px]">+Rp 0</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input class="peer sr-only" name="cupSize" type="radio" value="Medium (M)">
+              <div
+                class="p-3 rounded-2xl bg-surface-container-low peer-checked:bg-primary peer-checked:text-on-primary text-on-surface-variant flex flex-col items-center gap-1 transition-all">
+                <span class="material-symbols-outlined text-[20px]">local_cafe</span>
+                <span class="font-label-md text-label-md font-bold">Medium</span>
+                <span class="font-label-sm text-[11px]">+Rp 4.000</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input class="peer sr-only" name="cupSize" type="radio" value="Large (L)">
+              <div
+                class="p-3 rounded-2xl bg-surface-container-low peer-checked:bg-primary peer-checked:text-on-primary text-on-surface-variant flex flex-col items-center gap-1 transition-all">
+                <span class="material-symbols-outlined text-[20px]">local_cafe</span>
+                <span class="font-label-md text-label-md font-bold">Large</span>
+                <span class="font-label-sm text-[11px]">+Rp 7.000</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Temperature / Hangat / Dingin -->
+        <div class="flex flex-col gap-2.5">
+          <label class="font-label-lg text-label-lg text-primary font-bold">2. Suhu Penyajian</label>
+          <div class="grid grid-cols-2 gap-2.5">
+            <label class="cursor-pointer">
+              <input checked="" class="peer sr-only" name="cupTemp" type="radio" value="Ice Dingin">
+              <div
+                class="p-3 rounded-2xl bg-surface-container-low peer-checked:bg-secondary peer-checked:text-on-secondary text-on-surface-variant flex items-center justify-center gap-2 transition-all">
+                <span class="material-symbols-outlined text-[18px]">ac_unit</span>
+                <span class="font-label-md text-label-md font-semibold">Dingin / Ice</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input class="peer sr-only" name="cupTemp" type="radio" value="Hot Hangat">
+              <div
+                class="p-3 rounded-2xl bg-surface-container-low peer-checked:bg-secondary peer-checked:text-on-secondary text-on-surface-variant flex items-center justify-center gap-2 transition-all">
+                <span class="material-symbols-outlined text-[18px]">local_cafe</span>
+                <span class="font-label-md text-label-md font-semibold">Hangat / Fresh</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Modal CTA -->
+        <div class="flex items-center justify-between pt-4 border-t border-surface-container">
+          <div class="flex flex-col">
+            <span class="font-label-sm text-[11px] text-on-surface-variant">Harga Racikan</span>
+            <span class="font-title-lg text-title-lg text-primary font-bold" id="modalFinalPrice">Rp 22.000</span>
+          </div>
+          <button
+            class="bg-primary hover:bg-primary-container text-on-primary px-6 py-3 rounded-full font-label-lg text-label-lg font-bold flex items-center gap-2 shadow-sm transition-all"
+            onclick="confirmModalAddToCart()" type="button">
+            <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+            <span>Tambah ke Pesanan</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="w-full bg-surface-container-low mt-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div class="md:col-span-1 flex flex-col gap-3">
+          <div class="flex items-center gap-2.5">
+            <img alt="Logo Tentang Kita" class="h-7 w-auto object-contain"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB466BcxNDsCPR8IRuE45h2wfKv80MQ3xotK1wgGPy32lEb2x1z9bfNkdSvB6N-mmecvybmUD8EpBCH3SprpU2YqniZ4adYKiXTw5bVpMQrQNQ5p5UAXeA3_7ihjANZ9pL4FiFJaYvGsq5HMV6DLdp9x422HfYoLiA95ZDcl-hmqHniau1SxJKK7enzwhXsLqj-c-UjCJXPT9m8OU8PCLYJ4yW3O3TUaeZ7MgWAoEl4CulMn5vO371glQ">
+            <span class="font-headline-md text-headline-md text-primary">TENTANG KITA</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Secangkir kehangatan dan rasa manis untuk melengkapi ceritamu di Kota Solo. Dikelola langsung oleh Kak Aca
+            dengan penuh cinta.
+          </p>
+          <div class="flex items-center gap-2 pt-2">
+            <span class="material-symbols-outlined text-secondary text-[20px]">local_cafe</span>
+            <span class="font-label-sm text-label-sm text-secondary font-semibold">Yuk, pinarak ngopi di Slamet
+              Riyadi</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h4 class="font-title-md text-title-md text-primary font-bold">Jelajahi Menu Solo</h4>
+          <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="index.html">Kopi Susu Aren Solo</a></li>
+            <li><a class="hover:text-primary transition-colors" href="index.html">Selat Solo Daging Sapi</a></li>
+            <li><a class="hover:text-primary transition-colors" href="index.html">Roti Srikaya Panggang Kak Aca</a></li>
+            <li><a class="hover:text-primary transition-colors" href="index.html">Pain au Chocolat Belgia</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h4 class="font-title-md text-title-md text-primary font-bold">Layanan & Akses</h4>
+          <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="ringkasan_pesanan.html">Halaman Pesanan & Meja</a>
+            </li>
+            <li><a class="hover:text-primary transition-colors" href="struk.html">Struk Pembelian & Cetak</a></li>
+            <li><a class="hover:text-primary transition-colors" href="lacak_status.html">Lacak Pesanan & Chat
+                Barista</a></li>
+            <li><a class="hover:text-primary transition-colors" href="admin.html">Portal Khusus Pemilik (Admin)</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h4 class="font-title-md text-title-md text-primary font-bold">Rumah Seduh Solo</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Jl. Slamet Riyadi No. 284, Laweyan, Solo<br>
+            Buka Setiap Hari: 08.00 - 23.00 WIB
+          </p>
+          <div class="flex items-center gap-2 mt-1 text-on-surface-variant">
+            <span class="material-symbols-outlined text-[18px] text-secondary">call</span>
+            <span class="font-body-sm text-body-sm">+62 813-2890-7766 (Kak Aca)</span>
+          </div>
+          <div class="flex items-center gap-2 text-on-surface-variant">
+            <span class="material-symbols-outlined text-[18px] text-secondary">mail</span>
+            <span class="font-body-sm text-body-sm">halo@tentangkitasolo.cafe</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant border-t border-surface-container">
+        <p>© 2026 Tentang Kita Coffee & Artisan Pastry Solo. Dikelola oleh Kak Aca.</p>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-primary transition-colors" href="index.html">Menu</a>
+          <a class="hover:text-primary transition-colors" href="profil.html">Profil</a>
+          <a class="hover:text-primary transition-colors" href="admin.html">Portal Pemilik</a>
+          <a class="hover:text-primary transition-colors" href="struk.html">Struk Transaksi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client-side Logic: Dynamic Catalog Rendering & Cart Sync -->
+  <script>
+    let activeCategory = 'all';
+    let searchQuery = '';
+    let activeModalItem = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCatalogCards();
+      renderSidebarCart();
+      initSearchAndFilters();
+      TentangKitaStore.updateHeaderBadges();
+
+      // Check active order status teaser
+      const activeOrder = TentangKitaStore.getActiveOrder();
+      if (activeOrder) {
+        document.getElementById('activeOrderBadgeText').textContent = activeOrder.orderId || '#TK-88294';
+        const stageLabels = ['', 'Pesanan Diterima', 'Sedang Diseduh / Dimasak', 'Pesanan Siap', 'Selesai'];
+        document.getElementById('quickOrderStatusTitle').textContent = stageLabels[activeOrder.stage || 2] || 'Sedang Diproses';
+      }
+    });
+
+    // Dynamic Catalog Rendering from TentangKitaStore.getMenuCatalog()
+    function renderCatalogCards() {
+      const catalog = TentangKitaStore.getMenuCatalog();
+      const grid = document.getElementById('productCardsGrid');
+      if (!grid) return;
+
+      const filtered = catalog.filter(item => {
+        let matchesCat = false;
+        if (activeCategory === 'all') matchesCat = true;
+        else if (activeCategory === 'favorite') matchesCat = Boolean(item.isFavorite);
+        else if (activeCategory === item.category) matchesCat = true;
+
+        let matchesSearch = true;
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase();
+          matchesSearch = item.name.toLowerCase().includes(q) ||
+            (item.desc && item.desc.toLowerCase().includes(q)) ||
+            item.category.toLowerCase().includes(q);
+        }
+
+        return matchesCat && matchesSearch;
+      });
+
+      document.getElementById('catalogCounterText').textContent = `Menampilkan ${filtered.length} menu pilihan`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-2 py-12 text-center text-on-surface-variant bg-surface-container-lowest rounded-3xl p-6 border border-outline-variant/30">
+            <span class="material-symbols-outlined text-4xl text-outline mb-2">search_off</span>
+            <p class="font-bold text-primary">Tidak ada menu yang sesuai</p>
+            <p class="text-xs text-on-surface-variant mt-1">Coba kata kunci lain atau pilih kategori Semua Menu.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => {
+        const isSoldOut = item.available === false;
+
+        return `
+          <article class="product-card group bg-surface-container-lowest rounded-3xl p-5 shadow-[0_8px_24px_rgba(74,46,43,0.04)] hover:shadow-[0_16px_36px_rgba(74,46,43,0.09)] transition-all duration-300 flex flex-col justify-between border border-outline-variant/30" data-category="${item.category}" data-favorite="${Boolean(item.isFavorite)}" data-title="${item.name}">
+            <div>
+              <div class="relative w-full h-52 rounded-2xl overflow-hidden bg-surface-container">
+                <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${isSoldOut ? 'grayscale opacity-60' : ''}">
+                
+                <span class="absolute top-3 left-3 bg-secondary text-on-secondary font-label-sm text-label-sm px-3 py-1 rounded-full shadow-sm flex items-center gap-1 font-bold">
+                  <span class="material-symbols-outlined text-[14px]">stars</span>
+                  <span>${item.badge || 'Standar Solo'}</span>
+                </span>
+
+                <div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1 font-label-md text-label-md text-primary font-bold shadow-sm">
+                  <span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span>${item.rating || '4.9'}</span>
+                  <span class="text-on-surface-variant font-normal text-[11px]">(${item.reviews || '200+'})</span>
+                </div>
+              </div>
+
+              <div class="pt-4 flex flex-col gap-1.5">
+                <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">${item.categoryLabel || item.category}</span>
+                <h3 class="font-title-lg text-title-lg text-primary leading-snug group-hover:text-secondary transition-colors font-bold">
+                  <a href="detail_produk.html" class="hover:underline">${item.name} ↗</a>
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 leading-relaxed">
+                  ${item.desc || 'Racikan istimewa dibuat dengan bahan segar berkualitas tinggi khas Tentang Kita Solo.'}
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-5 mt-4 flex items-center justify-between bg-surface-container-low/60 -mx-5 -mb-5 px-5 py-3.5 rounded-b-3xl border-t border-outline-variant/20">
+              <div class="flex flex-col">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Harga Solo</span>
+                <span class="font-title-lg text-title-lg text-primary font-bold">${TentangKitaStore.formatRupiah(item.price)}</span>
+              </div>
+
+              ${isSoldOut ? `
+                <button disabled class="bg-surface-container-high text-outline px-4 py-2 rounded-full font-label-lg text-label-lg font-bold cursor-not-allowed">
+                  Habis (Sold Out)
+                </button>
+              ` : `
+                <button class="bg-primary hover:bg-primary-container text-on-primary px-4 py-2 rounded-full font-label-lg text-label-lg flex items-center gap-1.5 shadow-[0_2px_8px_rgba(50,25,23,0.2)] hover:scale-102 active:scale-98 transition-all font-bold cursor-pointer" onclick="openCustomModal('${item.name}', ${item.price}, '${item.desc}')" type="button">
+                  <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                  <span>Pesan</span>
+                </button>
+              `}
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // Modal Customization Logic
+    function openCustomModal(title, basePrice, desc) {
+      activeModalItem = { title, basePrice: Number(basePrice) };
+      document.getElementById('modalItemTitle').textContent = title;
+      document.getElementById('modalItemDesc').textContent = desc || 'Sesuaikan racikan kopi atau makanan sesuai seleramu.';
+      document.getElementById('modalFinalPrice').textContent = TentangKitaStore.formatRupiah(basePrice);
+
+      const modal = document.getElementById('customModal');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.querySelector('div').classList.remove('scale-95');
+    }
+
+    function closeCustomModal() {
+      const modal = document.getElementById('customModal');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modal.querySelector('div').classList.add('scale-95');
+      activeModalItem = null;
+    }
+
+    function confirmModalAddToCart() {
+      if (!activeModalItem) return;
+      const size = document.querySelector('input[name="cupSize"]:checked')?.value || 'Regular (S)';
+      const temp = document.querySelector('input[name="cupTemp"]:checked')?.value || 'Ice';
+
+      let extra = 0;
+      if (size.includes('Medium')) extra += 4000;
+      if (size.includes('Large')) extra += 7000;
+
+      const totalItemPrice = activeModalItem.basePrice + extra;
+
+      TentangKitaStore.addToCart({
+        name: activeModalItem.title,
+        size: size.split(' ')[0],
+        temp: temp.split(' ')[0],
+        price: totalItemPrice,
+        qty: 1
+      }, 1);
+
+      closeCustomModal();
+      renderSidebarCart();
+    }
+
+    // Sidebar Mini Cart Renderer
+    function renderSidebarCart() {
+      const cart = TentangKitaStore.getCart();
+      const cartList = document.getElementById('cartItemsList');
+      const cartCount = document.getElementById('cartCountBadge');
+      const subtotalEl = document.getElementById('cartSubtotal');
+      const totalEl = document.getElementById('cartTotal');
+
+      const totalCount = cart.reduce((s, i) => s + (i.qty || 1), 0);
+      if (cartCount) cartCount.textContent = `${totalCount} Item`;
+
+      if (!cartList) return;
+
+      if (cart.length === 0) {
+        cartList.innerHTML = `
+          <div class="py-6 text-center text-on-surface-variant font-body-sm">
+            Keranjang kosong. Yuk pilih menu favoritmu di Solo! ☕
+          </div>
+        `;
+      } else {
+        cartList.innerHTML = cart.map((item, index) => {
+          const meta = [item.size, item.temp].filter(Boolean).join(' • ');
+          return `
+            <div class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-low/70 hover:bg-surface-container-low transition-colors group">
+              <div class="flex items-center gap-2.5 flex-1 min-w-0 pr-2">
+                <div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-secondary shrink-0 font-bold text-xs">
+                  ☕
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-title-md text-sm text-primary font-semibold truncate">${item.name}</span>
+                  <span class="font-body-sm text-[11px] text-on-surface-variant truncate">${meta || 'Pilihan Barista'}</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <div class="flex flex-col items-end">
+                  <span class="font-label-md text-xs text-primary font-bold">${TentangKitaStore.formatRupiah((item.price || 0) * (item.qty || 1))}</span>
+                  <span class="font-label-sm text-[10px] text-secondary font-bold">x${item.qty || 1}</span>
+                </div>
+                <button onclick="TentangKitaStore.removeFromCart(${index}); renderSidebarCart();" class="text-outline hover:text-error opacity-60 hover:opacity-100 p-1" title="Hapus">
+                  <span class="material-symbols-outlined text-[16px]">close</span>
+                </button>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      const subtotal = TentangKitaStore.calculateSubtotal(cart);
+      const voucher = TentangKitaStore.getAppliedVoucher();
+      const discount = (voucher && subtotal > 0) ? Math.min(voucher.discount, subtotal) : 0;
+      const serviceFee = subtotal > 0 ? 2000 : 0;
+      const finalBill = Math.max(0, subtotal - discount + serviceFee);
+
+      if (subtotalEl) subtotalEl.textContent = TentangKitaStore.formatRupiah(subtotal);
+      if (totalEl) totalEl.textContent = TentangKitaStore.formatRupiah(finalBill);
+
+      const discountRow = document.getElementById('sidebarDiscountRow');
+      if (discount > 0 && discountRow) {
+        discountRow.style.display = 'flex';
+        document.getElementById('cartDiscount').textContent = `-${TentangKitaStore.formatRupiah(discount)}`;
+      } else if (discountRow) {
+        discountRow.style.display = 'none';
+      }
+    }
+
+    // Filter & Search Engine
+    function initSearchAndFilters() {
+      const searchInput = document.getElementById('headerSearchInput');
+      const chips = document.querySelectorAll('.category-chip');
+
+      searchInput?.addEventListener('input', function () {
+        searchQuery = this.value.trim();
+        renderCatalogCards();
+      });
+
+      chips.forEach(btn => {
+        btn.addEventListener('click', function () {
+          chips.forEach(b => {
+            b.classList.remove('bg-secondary', 'text-on-secondary', 'shadow-[0_2px_10px_rgba(140,77,67,0.25)]');
+            b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          });
+          this.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+          this.classList.add('bg-secondary', 'text-on-secondary', 'shadow-[0_2px_10px_rgba(140,77,67,0.25)]');
+
+          activeCategory = this.dataset.cat || 'all';
+          renderCatalogCards();
+        });
+      });
+    }
+  </script>
+
+</body>
+
+</html>
